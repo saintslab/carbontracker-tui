@@ -1,0 +1,17 @@
+{
+  "DK-DK1": {
+    "zoneName": "West Denmark",
+    "zoneKey": "DK-DK1",
+    "countryCode": "DK",
+    "displayName": "Denmark West",
+    "isCommerciallyAvailable": true,
+    "tier": "TIER_A"
+  },
+  "DE": {
+    "zoneName": "Germany",
+    "zoneKey": "DE",
+    "countryCode": "DE",
+    "isCommerciallyAvailable": true,
+    "tier": "TIER_A"
+  }
+}

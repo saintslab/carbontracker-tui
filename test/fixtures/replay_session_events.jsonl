@@ -1,0 +1,3 @@
+{"__type__":"StartedSession","timestamp":"2026-01-01T12:00:00","project_name":"project-a","run_name":"run-a","command":["python","train.py"],"log_dir":"carbontracker_logs","log_file_path":"carbontracker_logs/run-a_events.jsonl","trace_id":"trace-a","config_summary":{"components":["cpu"],"pue":1.1}}
+{"__type__":"ProcessStartedEvent","timestamp":"2026-01-01T12:00:01","trace_id":"trace-a","command":["python","train.py"],"pid":1234}
+{"__type__":"ProcessExitedEvent","timestamp":"2026-01-01T12:00:02","trace_id":"trace-a","return_code":0,"interrupted":false}

@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "carbontracker-tui"
+version = "0.1.0"
+description = "Terminal-first carbon tracking with watch and dashboard TUIs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["carbon", "emissions", "energy", "terminal", "tui"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "click>=8.1",
+    "py-cpuinfo>=9.0.0",
+    "pydantic>=2,<3",
+    "rich>=13",
+    "textual>=0.80",
+    "tomli>=2; python_version < '3.11'",
+    "tomli-w>=1.0",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "nvidia-ml-py>=12,<14",
+]
+
+[project.urls]
+Homepage = "https://github.com/dadyownes15/carbontracker-tui"
+Repository = "https://github.com/dadyownes15/carbontracker-tui"
+Issues = "https://github.com/dadyownes15/carbontracker-tui/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.uv.workspace]
+members = ["carbontracker"]
+
+[project.scripts]
+carbontracker = "carbontracker.entrypoints.cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/carbontracker"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

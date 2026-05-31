@@ -1,0 +1,16 @@
+[
+  {
+    "provider": "gcp",
+    "region": "europe-west1",
+    "zoneKey": "BE",
+    "displayName": "St Ghislain",
+    "status": "operational"
+  },
+  {
+    "provider": "aws",
+    "region": "eu-west-1",
+    "zoneKey": "IE",
+    "displayName": "Ireland",
+    "status": "operational"
+  }
+]
