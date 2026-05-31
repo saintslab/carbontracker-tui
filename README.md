@@ -341,5 +341,3 @@ Notes:
 - `pue` is applied as the power usage effectiveness multiplier.
 - Power samples, intensity samples, predictions, spans, and final stats are all
   written to JSONL for later `watch` and `dashboard` inspection.
-# carbontracker-tui
-# carbontracker-tui
